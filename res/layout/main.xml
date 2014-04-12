@@ -4,26 +4,27 @@
               android:layout_width="fill_parent"
               android:layout_height="fill_parent"
         >
-    <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/edit"
-            android:inputType="text"/>
-    <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/thread"
-            android:onClick="onMainUIThread"
-            android:text="Main UI Thread"/>
-    <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/Async"
-            android:onClick="onIntentService"
-            android:text="Intent Service"/>
-    <TextView
+    <TableLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/show"/>
+            android:id="@+id/inputTable"
+            android:stretchColumns="1">
+        <TableRow>
+            <TextView android:text="Type:"/>
+            <EditText android:id="@+id/type"/>
+            </TableRow>
+        <TableRow>
+            <TextView android:text="Name:"/>
+            <AutoCompleteTextView android:id="@+id/name"/>
+        </TableRow>
+        </TableLayout>
+    <Button android:layout_width="fill_parent" android:layout_height="wrap_content"
+            android:id="@+id/add"
+            android:onClick="onClickAddButton"
+            android:text="Add"/>
+    <Button android:layout_width="fill_parent" android:layout_height="wrap_content"
+            android:id="@+id/show"
+            android:onClick="onClickShowButton"
+            android:text="Show"/>
 </LinearLayout>
 
