@@ -4,23 +4,26 @@
               android:layout_width="fill_parent"
               android:layout_height="fill_parent"
         >
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edit"
+            android:inputType="text"/>
     <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/thread"
-            android:onClick="onClickThreadButton"
-            android:text="Thread"/>
+            android:onClick="onMainUIThread"
+            android:text="Main UI Thread"/>
     <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/Async"
-            android:onClick="onClickAsyncButton"
-            android:text="Async"/>
-    <Button
-            android:layout_width="match_parent"
+            android:onClick="onIntentService"
+            android:text="Intent Service"/>
+    <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/multi"
-            android:onClick="onClickMultiButton"
-            android:text="Multi"/>
+            android:id="@+id/show"/>
 </LinearLayout>
 
